@@ -19,8 +19,6 @@ movie_select.addEventListener("change", function (e)
 {
     ticket_price = +e.target.value;
 
-    console.log(e.target)
-
     updateCount();
 });
 
