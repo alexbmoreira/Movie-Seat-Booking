@@ -5,6 +5,8 @@ const total = document.getElementById("total");
 const movie_select = document.getElementById("movies");
 let ticket_price = +movie_select.value;
 
+loadMovieData();
+
 container.addEventListener("click", function (e)
 {
     if (e.target.classList.contains("seat") && !e.target.classList.contains("occupied"))
@@ -44,4 +46,25 @@ function saveMovieData(selected_seats, index, price)
     localStorage.setItem("seats", JSON.stringify(selected_seats));
     localStorage.setItem("movie_index", index);
     localStorage.setItem("movie_price", price);
+}
+
+function loadMovieData()
+{
+    const selected_seats = JSON.parse(localStorage.getItem("seats"));
+    const index = localStorage.getItem("movie_index");
+    const price = localStorage.getItem("movie_price");
+
+    if (selected_seats != null && selected_seats.length > 0)
+    {
+        seats.forEach(function (seat, index)
+        {
+            if (selected_seats.indexOf(index) !== -1)
+            {
+                seat.classList.toggle("selected");
+            }
+        });
+    }
+
+    movie_select.selectedIndex = index
+    updateCount();
 }
