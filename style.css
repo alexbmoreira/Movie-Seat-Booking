@@ -71,6 +71,46 @@ body
     transform: scale(1.2);
 }
 
+.legend
+{
+    background-color: rgba(0,0,0,0.2);
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #777777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.legend li
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.legend small
+{
+    margin-left: 2px;
+}
+
+.screen
+{
+    background-color: #FFFFFF;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 4px 10px 5px rgba(194, 194, 255, 0.6);
+}
+
+.container
+{
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
 .row
 {
     display: flex;
