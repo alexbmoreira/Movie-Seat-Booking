@@ -18,14 +18,15 @@ body
     margin: 0;
 }
 
-.movies_container
+.movies_selector
 {
     margin: 20px;
 }
 
-.movies_container select
+.movies_selector select
 {
-    background-color: #FFFFFF;
+    background-color: #1D1C29;
+    color: #FFFFFF;
     border: 0;
     border-radius: 5px;
     font-size: 14;
@@ -34,6 +35,11 @@ body
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+}
+
+select > option
+{
+    color: #1D1C29;
 }
 
 .seat
@@ -73,7 +79,7 @@ body
 
 .legend
 {
-    background-color: rgba(0,0,0,0.2);
+    background-color: #1D1C29;
     padding: 5px 10px;
     border-radius: 4px;
     color: #777777;
@@ -118,7 +124,7 @@ body
 
 p.text
 {
-    background-color: rgba(0,0,0,0.2);
+    background-color: #1D1C29;
     padding: 5px 10px;
     border-radius: 4px;
     color: #777777;
