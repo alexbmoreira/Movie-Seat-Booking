@@ -115,3 +115,16 @@ body
 {
     display: flex;
 }
+
+p.text
+{
+    background-color: rgba(0,0,0,0.2);
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #777777;
+}
+
+span
+{
+    color: #6FEAF6;
+}
