@@ -30,4 +30,18 @@ function updateCount()
     count.innerText = selected_count;
 
     total.innerText = selected_count * ticket_price;
+
+    // Copy selected seats
+    // Map through array
+    // Return new array of indexes
+    const seats_index = [...selected].map(seat => [...seats].indexOf(seat));
+
+    saveMovieData(seats_index, movie_select.selectedIndex, ticket_price);
+}
+
+function saveMovieData(selected_seats, index, price)
+{
+    localStorage.setItem("seats", JSON.stringify(selected_seats));
+    localStorage.setItem("movie_index", index);
+    localStorage.setItem("movie_price", price);
 }
