@@ -3,7 +3,7 @@ const seats = document.querySelectorAll(".row .seat:not(.occupied)");
 const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movie_select = document.getElementById("movies");
-const ticket_price = +movie_select.value;
+let ticket_price = +movie_select.value;
 
 container.addEventListener("click", function (e)
 {
@@ -13,6 +13,15 @@ container.addEventListener("click", function (e)
 
         updateCount();
     }
+});
+
+movie_select.addEventListener("change", function (e)
+{
+    ticket_price = +e.target.value;
+
+    console.log(e.target)
+
+    updateCount();
 });
 
 function updateCount()
